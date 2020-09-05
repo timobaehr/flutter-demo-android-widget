@@ -1,23 +1,12 @@
-# flutter_app_android_widget
+# Launch Screen Assets
 
-A plain Flutter application with Android widget.
+You can customize the launch screen with your own desired assets by replacing the image files in this directory.
 
-## Getting Started
+You can also do it by opening your Flutter project's Xcode project with `open ios/Runner.xcworkspace`, selecting `Runner/Assets.xcassets` in the Project Navigator and dropping in the desired images.
 
-This project is a starting point for a Flutter application.
+# Dart/Flutter Android/Kotlin communication
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-## Flutter Android communication
-
-**Dart setup**
+## Dart setup
 
 Go to `main.dart` and add the following top-level function:
 
@@ -83,7 +72,7 @@ void onWidgetUpdate() {
 
 This function will be the entry point for our widgets and gets called when our widgets `onUpdate` method is called. We can then pass back some data (for example after calling an api).
 
-**Android setup**
+## Android setup
 
 The samples here are in Kotlin but should work with some minor adjustments also in Java.
 
