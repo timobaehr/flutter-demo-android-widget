@@ -17,7 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Flutter Android communication
 
-**Dart setup**
+### Dart setup
 
 Go to `main.dart` and add the following top-level function:
 
@@ -83,7 +83,7 @@ void onWidgetUpdate() {
 
 This function will be the entry point for our widgets and gets called when our widgets `onUpdate` method is called. We can then pass back some data (for example after calling an api).
 
-**Android setup**
+### Android setup
 
 The samples here are in Kotlin but should work with some minor adjustments also in Java.
 
@@ -145,7 +145,7 @@ This will simply ensure that we store the handle (the hash of the entry point) t
 Now modify your `AppWidgetProvider` to look something similar to this:
 
 ~~~kotlin
-class Foo : AppWidgetProvider(), MethodChannel.Result {
+class CustomAppWidgetProvider : AppWidgetProvider(), MethodChannel.Result {
 
     private val TAG = this::class.java.simpleName
 
