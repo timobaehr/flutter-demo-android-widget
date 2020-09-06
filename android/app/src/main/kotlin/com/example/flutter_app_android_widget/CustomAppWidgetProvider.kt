@@ -36,7 +36,8 @@ class CustomAppWidgetProvider : AppWidgetProvider(), MethodChannel.Result {
         initializeFlutter()
 
         for (appWidgetId in appWidgetIds) {
-            updateWidget("onUpdate ${Math.random()}", appWidgetId, context)
+            updateWidget("Waiting for value", appWidgetId, context)
+
             // Pass over the id so we can update it later...
             channel?.invokeMethod("update", appWidgetId, this)
         }
@@ -128,11 +129,11 @@ class CustomAppWidgetProvider : AppWidgetProvider(), MethodChannel.Result {
     }
 }
 
-internal fun updateWidget(text: String, id: Int, context: Context) {
+internal fun updateWidget(text: String, appWidgetId: Int, context: Context) {
     val views = RemoteViews(context.packageName, R.layout.widget_layout).apply {
         setTextViewText(R.id.text, text)
     }
 
     val manager = AppWidgetManager.getInstance(context)
-    manager.updateAppWidget(id, views)
+    manager.updateAppWidget(appWidgetId, views)
 }

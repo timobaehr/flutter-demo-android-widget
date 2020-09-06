@@ -70,10 +70,9 @@ void onWidgetUpdate() {
       final result = Random().nextDouble();
 
       return {
-        // Pass back the id of the widget so we can
-        // update it later
+        // Pass back the id of the widget so we can update it later
         'id': id,
-        // Some data
+        // Some data of type double
         'value': result,
       };
     },
